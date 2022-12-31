@@ -2,7 +2,6 @@ package com.sales.app.domain;
 
 public class ProductDomain {
     private int productId;
-    private String name;
     private int categoryId;
     private String description;
     private Double value;
@@ -16,14 +15,6 @@ public class ProductDomain {
 
     public void setProductId(int productId) {
         this.productId = productId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getCategoryId() {
