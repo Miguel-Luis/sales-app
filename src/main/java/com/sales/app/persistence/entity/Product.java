@@ -13,7 +13,8 @@ public class Product {
     @Column(name = "category_id")
     private Integer categoryId;
 
-    private String description;
+    @Column(name = "description")
+    private String name;
 
     private Double value;
 
@@ -22,7 +23,7 @@ public class Product {
     private Boolean status;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", insertable = false)
+    @JoinColumn(name = "category_id", insertable = false, updatable = false)
     private Category category;
 
     public Integer getIdProduct() {
@@ -42,11 +43,11 @@ public class Product {
     }
 
     public String getDescription() {
-        return description;
+        return name;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.name = description;
     }
 
     public Double getValue() {

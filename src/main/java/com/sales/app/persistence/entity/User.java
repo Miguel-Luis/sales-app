@@ -26,7 +26,7 @@ public class User {
 
     private Boolean status;
 
-    @OneToMany(mappedBy = "sale")
+    @OneToMany(mappedBy = "user")
     private List<Sale> sales;
 
     public Integer getIdUser() {

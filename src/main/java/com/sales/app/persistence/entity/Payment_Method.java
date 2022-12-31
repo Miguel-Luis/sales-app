@@ -15,7 +15,7 @@ public class Payment_Method {
 
     private Boolean status;
 
-    @OneToMany(mappedBy = "sale")
+    @OneToMany(mappedBy = "paymentMethod")
     private List<Sale> sales;
 
     public Integer getIdProduct() {
@@ -40,5 +40,21 @@ public class Payment_Method {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public Integer getIdPaymentMethod() {
+        return idPaymentMethod;
+    }
+
+    public void setIdPaymentMethod(Integer idPaymentMethod) {
+        this.idPaymentMethod = idPaymentMethod;
+    }
+
+    public List<Sale> getSales() {
+        return sales;
+    }
+
+    public void setSales(List<Sale> sales) {
+        this.sales = sales;
     }
 }

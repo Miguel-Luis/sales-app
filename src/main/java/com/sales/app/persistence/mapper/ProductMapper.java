@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@Mapper(componentModel = "spring", uses = {CategoryMapper.class})
+@Mapper(componentModel = "spring")
 public interface ProductMapper {
     @Mappings({
             @Mapping(source = "idProduct", target = "productId"),
@@ -20,7 +20,7 @@ public interface ProductMapper {
             @Mapping(source = "value", target = "value"),
             @Mapping(source = "stock", target = "stock"),
             @Mapping(source = "status", target = "status"),
-            @Mapping(source = "category", target = "category"),
+            //@Mapping(source = "category", target = "category"),
     })
     ProductDomain toProduct(Product product);
     List<ProductDomain> toProducts(List<Product> products);
